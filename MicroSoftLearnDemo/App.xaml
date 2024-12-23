@@ -3,6 +3,17 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:MicroSoftLearnDemo"
-    StartupUri="TestFromToBy.xaml">
+    StartupUri="ProPertyAnimation.xaml">
+
+    <!--
+        MainWindow 入门
+        
+        KeyFrame 关键帧
+        TestFromToBy fromtoBy
+        TipsAndTricks 动画基础提示和技巧
+        EasingFunctions 缓动函数
+        CustomEasingFunctions 缓动函数
+        PathAnimations 路径动画
+    -->
     <Application.Resources />
 </Application>

@@ -1,0 +1,47 @@
+﻿<Window
+    x:Class="MicroSoftLearnDemo.PathAnimations"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MicroSoftLearnDemo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="PathAnimations"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Canvas Width="400" Height="400">
+
+        <!--
+            The Button that is animated across the screen by animating
+            the MatrixTransform applied to the button.
+        -->
+        <Button MinWidth="100" Content="A Button">
+            <Button.RenderTransform>
+                <MatrixTransform x:Name="ButtonMatrixTransform">
+                    <MatrixTransform.Matrix>
+                        <Matrix />
+                    </MatrixTransform.Matrix>
+                </MatrixTransform>
+            </Button.RenderTransform>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <MatrixAnimationUsingPath
+                                DoesRotateWithTangent="True"
+                                RepeatBehavior="Forever"
+                                Storyboard.TargetName="ButtonMatrixTransform"
+                                Storyboard.TargetProperty="Matrix"
+                                Duration="0:0:5">
+                                <MatrixAnimationUsingPath.PathGeometry>
+                                    <PathGeometry PresentationOptions:Freeze="True" Figures="M 10,100 C 35,0 135,0 160,100 180,190 285,200 310,100" />
+                                </MatrixAnimationUsingPath.PathGeometry>
+                            </MatrixAnimationUsingPath>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+    </Canvas>
+</Window>
