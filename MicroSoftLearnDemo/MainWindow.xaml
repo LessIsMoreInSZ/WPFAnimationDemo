@@ -10,7 +10,11 @@
     Height="450"
     mc:Ignorable="d">
     <Grid>
-        <StackPanel Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="797*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="10,10,7,10">
             <Rectangle
                 Name="MyRectangle"
                 Width="100"
