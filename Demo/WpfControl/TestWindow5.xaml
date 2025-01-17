@@ -1,0 +1,128 @@
+﻿<Window
+    x:Class="WpfControl.TestWindow5"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfControl"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="TestWindow5"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <DrawingImage x:Key="DrawingImage">
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V1024 H1355 V0 H0 Z">
+                    <GeometryDrawing Brush="#FF000000" Geometry="F1 M1355,1024z M0,0z M1327.98003,911.156742A34.632202,34.632202,0,0,0,1299.944438,896.520514L1259.498973,896.520514 1259.498973,378.398035A23.995168,23.995168,0,0,0,1234.761686,355.062528L1171.681604,355.062528A23.995168,23.995168,0,0,0,1146.944317,378.398035L1146.944317,427.666465 906.539115,427.666465 906.539115,426.635745A52.236905,52.236905,0,0,0,852.94166,375.718162L852.94166,249.516769A156.669485,156.669485,0,0,0,692.479124,96.970165L583.264001,96.970165 583.264001,71.531989A52.236905,52.236905,0,0,0,529.831461,20.614406L506.372267,20.614406A52.319362,52.319362,0,0,0,452.774812,71.325845L422.719008,71.325845A53.597455,53.597455,0,0,0,377.367315,95.692072L130.695334,95.692072 130.695334,94.496437A51.865845,51.865845,0,0,0,77.633853,43.949913L77.633853,327.191851A51.865845,51.865845,0,0,0,130.695334,276.645328L130.695334,273.882997 369.286468,273.882997 369.286468,276.233039A52.319362,52.319362,0,0,0,422.883923,327.150622L453.145871,327.150622A52.278133,52.278133,0,0,0,506.743326,376.625196L530.078834,376.625196A52.195676,52.195676,0,0,0,583.676289,325.790071L583.676289,298.166767 640.57205,298.166767A26.180296,26.180296,0,0,1,667.329549,323.604944L667.329549,375.718162 666.2576,375.718162A52.278133,52.278133,0,0,0,612.660144,426.553287L612.660144,427.625237 242.755244,427.625237 242.755244,378.398035A23.995168,23.995168,0,0,0,218.017957,355.062528L155.144019,355.062528A23.995168,23.995168,0,0,0,130.406732,378.398035L130.406732,525.543665 68.233684,525.543665A46.5061,46.5061,0,0,0,20.614406,570.854129L20.614406,690.953658A46.547329,46.547329,0,0,0,68.233684,736.305351L130.612876,736.305351 130.612876,896.602971 55.329066,896.602971A33.890083,33.890083,0,0,0,20.614406,929.586021L20.614406,970.237629A33.890083,33.890083,0,0,0,55.329066,1003.220679L1299.944438,1003.220679A34.467287,34.467287,0,0,0,1329.464267,986.481781L1334.659097,986.481781 1334.659097,911.156742z M387.179772,644.694931A31.333897,31.333897,0,0,1,419.214559,614.226839L935.894029,614.226839A31.292668,31.292668,0,0,1,967.928816,644.694931L967.928816,675.163023A31.210211,31.210211,0,0,1,935.894029,705.631115L419.214559,705.631115A31.292668,31.292668,0,0,1,387.179772,675.163023z M1147.356605,896.6442L242.755244,896.6442 242.755244,834.800982 1147.356605,834.800982z" />
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+
+        <DrawingImage x:Key="DieCastRod">
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V1024 H1024 V0 H0 Z">
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M581.358,50.356L442.644,50.356C395.192,50.356,356.724,88.824,356.724,136.276L356.724,365.006A113.76,113.76,0,0,0,362.92,402.056C374.754,436.42 399.692,518.788 402.966,610.916 403.444,624.35 414.358,635.04 427.798,635.04L596.202,635.04C609.642,635.04 620.556,624.348 621.034,610.916 624.308,518.79 649.246,436.42 661.08,402.056A113.708,113.708,0,0,0,667.276,365.006L667.276,136.274C667.276,88.822,628.81,50.356,581.358,50.356z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M762.314,973.644L261.686,973.644C245.118,973.644,231.686,960.212,231.686,943.644L231.686,878.484 792.314,878.484 792.314,943.644C792.314,960.212,778.882,973.644,762.314,973.644z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M617.014,647.588A20.716,20.716,0,0,0,598.05,635.19L425.952,635.19A20.718,20.718,0,0,0,406.988,647.588C389.75,686.812,331.812,806.654,260.454,824.378L763.548,824.378C692.188,806.654,634.252,686.812,617.014,647.588z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M767.594,824.378L256.406,824.378C256.406,824.378,227.236,836.52,231.686,878L792.314,878C796.764,836.52,767.594,824.378,767.594,824.378z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M485.78,610.916C482.506,518.79,457.568,436.42,445.734,402.056A113.708,113.708,0,0,1,439.538,365.006L439.538,136.274C439.538,88.822,478.006,50.354,525.458,50.354L442.644,50.354C395.192,50.354,356.724,88.822,356.724,136.274L356.724,365.004A113.76,113.76,0,0,0,362.92,402.054C374.754,436.418 399.692,518.786 402.966,610.914 403.444,624.348 414.358,635.038 427.798,635.038L510.612,635.038C497.17,635.04,486.256,624.348,485.78,610.916z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M489.8,647.588A20.716,20.716,0,0,1,508.764,635.19L425.95,635.19A20.714,20.714,0,0,0,406.986,647.588C389.748,686.812,331.81,806.654,260.454,824.38L343.268,824.38C414.626,806.654,472.562,686.81,489.8,647.588z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M339.22,849.222L789.348,849.222C782.462,830.578,767.594,824.378,767.594,824.378L256.406,824.378C256.406,824.378,227.236,836.52,231.686,878L316.204,878C322.296,856.292,339.22,849.222,339.22,849.222z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M314.5,948.244L314.5,878.482 231.686,878.482 231.686,948.244C231.686,962.272,245.59,973.644,262.742,973.644L345.556,973.644C328.404,973.644,314.5,962.272,314.5,948.244z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M638.292,332.91A12,12,0,0,1,626.292,320.91L626.292,147.548C624.496,128.34 618.824,114.302 609.876,106.928 602.16,100.57 594.048,100.96 593.982,100.968 587.374,101.652 581.494,96.858 580.81,90.266A12,12,0,0,1,591.51,77.094C593.316,76.904 609.636,75.634 625.138,88.406 639.436,100.19 647.884,119.544 650.246,145.932 650.278,146.288 650.292,146.644 650.292,147.002L650.292,320.912A12,12,0,0,1,638.292,332.91z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M658.984,800.814A11.954,11.954,0,0,1,652.526,798.92C615.04,774.928,589.444,705.822,588.374,702.892A11.996,11.996,0,0,1,595.522,687.502A11.994,11.994,0,0,1,610.912,694.652C617.46,712.514,640.02,762.422,665.462,778.706A12,12,0,0,1,658.984,800.814z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M747.33,962.3A12,12,0,0,1,735.33,950.3L735.33,899.186A12,12,0,0,1,759.33,899.186L759.33,950.3A12,12,0,0,1,747.33,962.3z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M480.944,138.268 M449.888,138.268A31.056,31.056,0,1,0,512,138.268A31.056,31.056,0,1,0,449.888,138.268z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M364.19,923.386 M333.134,923.386A31.056,31.056,0,1,0,395.246,923.386A31.056,31.056,0,1,0,333.134,923.386z" />
+                    <GeometryDrawing Brush="#FF515151" Geometry="F1 M1024,1024z M0,0z M539.82,235.998 M508.764,235.998A31.056,31.056,0,1,0,570.876,235.998A31.056,31.056,0,1,0,508.764,235.998z" />
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+    </Window.Resources>
+    <Canvas>
+        <!--<Viewbox>
+            <Rectangle
+                Canvas.Left="52"
+                Canvas.Top="59"
+                Width="300"
+                Height="300">
+                <Rectangle.RenderTransform>
+                    <TranslateTransform x:Name="FirstRectTransform" />
+                </Rectangle.RenderTransform>
+        -->
+        <!--  绑定动画到矩形  -->
+        <!--
+                <Rectangle.Triggers>
+                    <EventTrigger RoutedEvent="Rectangle.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+        -->
+        <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetName="FirstRectTransform" Storyboard.TargetProperty="(Rectangle.RenderTransform).(TranslateTransform.X)">
+                <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
+            </DoubleAnimationUsingKeyFrames>-->
+        <!--
+
+                                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="FirstRectTransform" Storyboard.TargetProperty="X">
+                                    <LinearDoubleKeyFrame KeyTime="0:0:2" Value="100" />
+        -->
+        <!--<LinearDoubleKeyFrame KeyTime="0:0:4" Value="0" />-->
+        <!--
+                                </DoubleAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Rectangle.Triggers>
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="{StaticResource DieCastRod}">
+                        <ImageBrush.Transform>
+                            <RotateTransform Angle="-90" CenterX="0.5" CenterY="0.5" />
+                        </ImageBrush.Transform>
+                    </ImageBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Viewbox>-->
+
+
+
+
+        <Border
+            Width="150"
+            Height="70"
+            Margin="60">
+            <Border.RenderTransform>
+                <TranslateTransform x:Name="FirstRectTransform" />
+            </Border.RenderTransform>
+            <Border.Triggers>
+                <EventTrigger RoutedEvent="Rectangle.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever"
+                                Storyboard.TargetName="FirstRectTransform" Storyboard.TargetProperty="X">
+                                <LinearDoubleKeyFrame KeyTime="0:0:2" Value="80" />
+                                <!--<LinearDoubleKeyFrame KeyTime="0:0:4" Value="0" />-->
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Border.Triggers>
+            <Image
+                Width="150"
+                Height="70"
+                Source="{StaticResource DieCastRod}" Margin="5,64,-5,-64">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="-90" CenterX="0.5" CenterY="0.5" />
+                </Image.RenderTransform>
+            </Image>
+
+        </Border>
+
+        <Image
+            Canvas.Left="247"
+            Canvas.Top="17"
+            Width="150"
+            Height="100"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Source="{StaticResource DrawingImage}" />
+    </Canvas>
+</Window>
