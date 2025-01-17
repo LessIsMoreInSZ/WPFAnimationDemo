@@ -33,16 +33,13 @@
                 <EventTrigger RoutedEvent="Rectangle.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="FirstRectTransform" Storyboard.TargetProperty="(Rectangle.RenderTransform).(TranslateTransform.X)">
+                            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetName="FirstRectTransform" Storyboard.TargetProperty="(Rectangle.RenderTransform).(TranslateTransform.X)">
                                 <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
-                                <DoubleAnimationUsingKeyFrames.KeyFrames>
-                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="FirstRectTransform" Storyboard.TargetProperty="(Rectangle.RenderTransform).(TranslateTransform.X)">
-                                        <DoubleAnimationUsingKeyFrames.KeyFrames>
-                                            <LinearDoubleKeyFrame KeyTime="0:0:2" Value="100" />
-                                            <LinearDoubleKeyFrame KeyTime="0:0:4" Value="0" />
-                                        </DoubleAnimationUsingKeyFrames.KeyFrames>
-                                    </DoubleAnimationUsingKeyFrames>
-                                </DoubleAnimationUsingKeyFrames.KeyFrames>
+                            </DoubleAnimationUsingKeyFrames>-->
+
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="FirstRectTransform" Storyboard.TargetProperty="X">
+                                    <LinearDoubleKeyFrame KeyTime="0:0:2" Value="100" />
+                                    <!--<LinearDoubleKeyFrame KeyTime="0:0:4" Value="0" />-->
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                     </BeginStoryboard>
@@ -59,21 +56,18 @@
             <Rectangle.RenderTransform>
                 <TranslateTransform x:Name="SecondRectTransform" />
             </Rectangle.RenderTransform>
-            <!--  绑定动画到矩形  -->
+              <!--绑定动画到矩形-->  
             <Rectangle.Triggers>
                 <EventTrigger RoutedEvent="Rectangle.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SecondRectTransform" Storyboard.TargetProperty="(Rectangle.RenderTransform).(TranslateTransform.X)">
+                            <!--<DoubleAnimationUsingKeyFrames Storyboard.TargetName="SecondRectTransform" Storyboard.TargetProperty="(Rectangle.RenderTransform).(TranslateTransform.X)">
                                 <DiscreteDoubleKeyFrame KeyTime="0:0:0" Value="0" />
-                                <DoubleAnimationUsingKeyFrames.KeyFrames>
-                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SecondRectTransform" Storyboard.TargetProperty="(Rectangle.RenderTransform).(TranslateTransform.X)">
-                                        <DoubleAnimationUsingKeyFrames.KeyFrames>
-                                            <LinearDoubleKeyFrame KeyTime="0:0:2" Value="-100" />
-                                            <LinearDoubleKeyFrame KeyTime="0:0:4" Value="0" />
-                                        </DoubleAnimationUsingKeyFrames.KeyFrames>
-                                    </DoubleAnimationUsingKeyFrames>
-                                </DoubleAnimationUsingKeyFrames.KeyFrames>
+
+                            </DoubleAnimationUsingKeyFrames>-->
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="SecondRectTransform" Storyboard.TargetProperty="X">
+                                    <LinearDoubleKeyFrame KeyTime="0:0:2" Value="-100" />
+                                    <LinearDoubleKeyFrame KeyTime="0:0:4" Value="0" />
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                     </BeginStoryboard>
