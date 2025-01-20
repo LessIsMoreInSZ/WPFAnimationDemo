@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:WpfControl"
     xmlns:svg="http://sharpvectors.codeplex.com/runtime/"
-    StartupUri="TestWindow5.xaml">
+    StartupUri="TestWindow6.xaml">
     <!--  MainWindow  -->
     <!--  TestWindow  -->
     <Application.Resources />

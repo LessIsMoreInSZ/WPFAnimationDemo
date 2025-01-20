@@ -96,7 +96,8 @@
                 <EventTrigger RoutedEvent="Rectangle.Loaded">
                     <BeginStoryboard>
                         <Storyboard>
-                            <DoubleAnimationUsingKeyFrames RepeatBehavior="Forever"
+                            <!--RepeatBehavior="Forever"-->
+                            <DoubleAnimationUsingKeyFrames 
                                 Storyboard.TargetName="FirstRectTransform" Storyboard.TargetProperty="X">
                                 <LinearDoubleKeyFrame KeyTime="0:0:2" Value="80" />
                                 <!--<LinearDoubleKeyFrame KeyTime="0:0:4" Value="0" />-->
