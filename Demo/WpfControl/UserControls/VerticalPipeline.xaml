@@ -1,0 +1,63 @@
+﻿<UserControl
+    x:Class="WpfControl.UserControls.VerticalPipeline"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfControl.UserControls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="800"
+    d:DesignWidth="30"
+    mc:Ignorable="d">
+    <Grid>
+        <Border CornerRadius="{Binding CapRadius, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}}">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="1,0.5">
+                    <GradientStop Offset="0.1" Color="#FFCBCBCB" />
+                    <GradientStop Offset="0.5" Color="White" />
+                    <GradientStop Offset="0.8" Color="#FFCBCBCB" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border x:Name="border">
+                <Line
+                    x:Name="line"
+                    HorizontalAlignment="Center"
+                    Opacity="0.5"
+                    Stretch="Fill"
+                    Stroke="{Binding LiquidColor, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}}"
+                    StrokeDashArray="2,3"
+                    StrokeDashCap="Round"
+                    StrokeEndLineCap="Round"
+                    StrokeStartLineCap="Round"
+                    StrokeThickness="10"
+                    X1="0"
+                    X2="0"
+                    Y1="0"
+                    Y2="{Binding RelativeSource={RelativeSource Self}, Path=ActualHeight}" />
+            </Border>
+        </Border>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="NSFlowState">
+                    <Storyboard RepeatBehavior="Forever">
+                        <DoubleAnimation
+                            Storyboard.TargetName="line"
+                            Storyboard.TargetProperty="StrokeDashOffset"
+                            From="0"
+                            To="-5"
+                            Duration="0:0:1" />
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="SNFlowState">
+                    <Storyboard RepeatBehavior="Forever">
+                        <DoubleAnimation
+                            Storyboard.TargetName="line"
+                            Storyboard.TargetProperty="StrokeDashOffset"
+                            From="0"
+                            To="5"
+                            Duration="0:0:1" />
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+    </Grid>
+</UserControl>
