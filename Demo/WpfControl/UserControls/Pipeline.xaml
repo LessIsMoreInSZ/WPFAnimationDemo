@@ -9,6 +9,7 @@
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
+                <VisualState x:Name="NoFlowState"/>
                 <VisualState x:Name="WEFlowState">
                     <Storyboard RepeatBehavior="Forever">
                         <DoubleAnimation Duration="0:0:1" From="0" To="-5" Storyboard.TargetName="liquidline" Storyboard.TargetProperty="StrokeDashOffset">

@@ -37,6 +37,7 @@
         </Border>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
+                <VisualState x:Name="NoFlowState" />
                 <VisualState x:Name="NSFlowState">
                     <Storyboard RepeatBehavior="Forever">
                         <DoubleAnimation

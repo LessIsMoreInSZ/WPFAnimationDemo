@@ -6,9 +6,13 @@
     xmlns:local="clr-namespace:WpfControl"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:uctrl="clr-namespace:WpfControl.UserControls"
+    xmlns:viewModels="clr-namespace:WpfControl.ViewModels"
     Title="TestWindow7"
     WindowState="Maximized"
     mc:Ignorable="d">
+    <Window.DataContext>
+        <viewModels:TestWindow7VM />
+    </Window.DataContext>
     <ScrollViewer
         Margin="10"
         CanContentScroll="True"
@@ -24,6 +28,16 @@
                 CapRadius="2"
                 Direction="WE"
                 LiquidColor="Red" />
+
+            <uctrl:Pipeline
+                Canvas.Top="50"
+                Canvas.Right="0"
+                Width="565"
+                Height="15"
+                Panel.ZIndex="4"
+                CapRadius="2"
+                Direction="EW"
+                LiquidColor="Red" />
             <uctrl:VerticalPipeline
                 Canvas.Top="0"
                 Canvas.Right="800"
@@ -33,6 +47,67 @@
                 CapRadius="2"
                 Direction="NS"
                 LiquidColor="Red" />
+
+            <uctrl:VerticalPipeline
+                Canvas.Left="872"
+                Canvas.Top="8"
+                Canvas.Right="700"
+                Width="15"
+                Height="150"
+                Panel.ZIndex="3"
+                CapRadius="2"
+                Direction="SN"
+                LiquidColor="Red" />
+
+            <!--<Image Source="Assets/icon_气瓶.png" />-->
+
+            <Image
+                Canvas.Left="303"
+                Canvas.Top="544"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Source="pack://application:,,,/Assets/icon_气瓶.png" />
+
+            <Button
+                Background="Transparent"
+                BorderThickness="0"
+                Canvas.Left="814"
+                Canvas.Top="373"
+                Panel.ZIndex="5"
+                Command="{Binding ChangeCommand}">
+                <Button.Content>
+                    <Image Source="pack://application:,,,/Assets/icon_电磁阀.png" />
+                </Button.Content>
+            </Button>
+
+
+            <uctrl:VerticalPipeline
+                Canvas.Left="350"
+                Canvas.Top="394"
+                Canvas.Right="700"
+                Width="15"
+                Height="150"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Panel.ZIndex="3"
+                CapRadius="2"
+                Direction="SN"
+                LiquidColor="Red" />
+            <uctrl:Pipeline
+                x:Name="top复制__C_"
+                Canvas.Left="350"
+                Canvas.Top="379"
+                Canvas.Right="0"
+                Width="565"
+                Height="15"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Panel.ZIndex="4"
+                CapRadius="2"
+                Direction="{Binding WaterDirection}"
+                LiquidColor="Red" />
+
+
 
             <!--<uctrl:Pipeline
                 x:Name="right"

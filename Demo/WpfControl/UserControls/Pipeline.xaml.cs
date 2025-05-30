@@ -38,7 +38,14 @@ namespace WpfControl.UserControls
         private static void OnDirectionChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             WaterDirection value =(WaterDirection) e.NewValue;
-            VisualStateManager.GoToState(d as Pipeline, value == WaterDirection.WE ? "WEFlowState" : "EWFlowState", false);
+            string strStateName = string.Empty;
+            if (value == WaterDirection.WE)
+                strStateName = "WEFlowState";
+            else if (value == WaterDirection.EW)
+                strStateName = "EWFlowState";
+            else
+                strStateName = "NoFlowState";
+            VisualStateManager.GoToState(d as Pipeline, strStateName, false);
         }
 
 
