@@ -31,12 +31,14 @@ namespace WpfControl.ViewModels
             isStart = !isStart;
             if (!isStart)
             {
-                WaterDirection = WaterDirection.NONE;
+                WaterDirectionWE = WaterDirection.NONE;
+                WaterDirectionSN = WaterDirection.NONE;
 
             }
             else
             {
-                WaterDirection = WaterDirection.WE;
+                WaterDirectionWE = WaterDirection.WE;
+                WaterDirectionSN = WaterDirection.SN;
             }
         }
     }

@@ -69,11 +69,11 @@
                 Source="pack://application:,,,/Assets/icon_气瓶.png" />
 
             <Button
-                Background="Transparent"
-                BorderThickness="0"
                 Canvas.Left="814"
                 Canvas.Top="373"
                 Panel.ZIndex="5"
+                Background="Transparent"
+                BorderThickness="0"
                 Command="{Binding ChangeCommand}">
                 <Button.Content>
                     <Image Source="pack://application:,,,/Assets/icon_电磁阀.png" />
@@ -91,7 +91,7 @@
                 VerticalAlignment="Top"
                 Panel.ZIndex="3"
                 CapRadius="2"
-                Direction="SN"
+                Direction="{Binding WaterDirectionSN}"
                 LiquidColor="Red" />
             <uctrl:Pipeline
                 x:Name="top复制__C_"
@@ -104,7 +104,7 @@
                 VerticalAlignment="Top"
                 Panel.ZIndex="4"
                 CapRadius="2"
-                Direction="{Binding WaterDirection}"
+                Direction="{Binding WaterDirectionWE}"
                 LiquidColor="Red" />
 
 
