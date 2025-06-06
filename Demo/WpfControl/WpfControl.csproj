@@ -12,6 +12,11 @@
     <None Remove="Assets\icon_手阀.png" />
     <None Remove="Assets\icon_气瓶.png" />
     <None Remove="Assets\icon_电磁阀.png" />
+    <None Remove="Assets\关阀.jpg" />
+    <None Remove="Assets\开阀.jpg" />
+    <None Remove="Assets\正常阀.jpg" />
+    <None Remove="Assets\气罐.png" />
+    <None Remove="Assets\泵.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +35,21 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\icon_电磁阀.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\关阀.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\开阀.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\正常阀.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\气罐.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\泵.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

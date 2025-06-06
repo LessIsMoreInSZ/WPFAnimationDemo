@@ -17,7 +17,10 @@ namespace WpfControl.ViewModels
     public partial class TestWindow7VM : ObservableObject
     {
 
-        private bool isStart; 
+        private bool isStart;
+
+        [ObservableProperty]
+        private string pathSource = @"pack://application:,,,/Assets/关阀.jpg";
 
         [ObservableProperty]
         private WaterDirection waterDirectionWE;
@@ -31,12 +34,14 @@ namespace WpfControl.ViewModels
             isStart = !isStart;
             if (!isStart)
             {
+                PathSource = @"pack://application:,,,/Assets/关阀.jpg";
                 WaterDirectionWE = WaterDirection.NONE;
                 WaterDirectionSN = WaterDirection.NONE;
 
             }
             else
             {
+                PathSource = @"pack://application:,,,/Assets/开阀.jpg";
                 WaterDirectionWE = WaterDirection.WE;
                 WaterDirectionSN = WaterDirection.SN;
             }

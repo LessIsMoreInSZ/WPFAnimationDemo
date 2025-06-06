@@ -27,7 +27,7 @@
                 Panel.ZIndex="4"
                 CapRadius="2"
                 Direction="WE"
-                LiquidColor="Red" />
+                LiquidColor="#F5F5F5" />
 
             <uctrl:Pipeline
                 Canvas.Top="50"
@@ -37,16 +37,17 @@
                 Panel.ZIndex="4"
                 CapRadius="2"
                 Direction="EW"
-                LiquidColor="Red" />
+                LiquidColor="#F0F0F0" />
             <uctrl:VerticalPipeline
-                Canvas.Top="0"
+                Canvas.Left="792"
+                Canvas.Top="10"
                 Canvas.Right="800"
-                Width="15"
+                Width="16"
                 Height="150"
                 Panel.ZIndex="3"
                 CapRadius="2"
                 Direction="NS"
-                LiquidColor="Red" />
+                LiquidColor="#E0E0E0" />
 
             <uctrl:VerticalPipeline
                 Canvas.Left="872"
@@ -57,18 +58,65 @@
                 Panel.ZIndex="3"
                 CapRadius="2"
                 Direction="SN"
-                LiquidColor="Red" />
+                LiquidColor="#333333" />
 
             <!--<Image Source="Assets/icon_气瓶.png" />-->
 
-            <Image
-                Canvas.Left="303"
-                Canvas.Top="544"
-                HorizontalAlignment="Left"
-                VerticalAlignment="Center"
-                Source="pack://application:,,,/Assets/icon_气瓶.png" />
+
+
 
             <Button
+                Canvas.Left="582"
+                Canvas.Top="333"
+                Width="100"
+                Panel.ZIndex="5"
+                Background="Transparent"
+                BorderThickness="0"
+                Command="{Binding ChangeCommand}">
+                <Button.Content>
+                    <Image
+                        Width="64"
+                        Height="75"
+                        RenderTransformOrigin="0.536,0.268"
+                        Source="{Binding PathSource}" />
+                </Button.Content>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <!--  自定义按钮模板  -->
+                        <Border
+                            x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <!--  鼠标悬停时背景透明  -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="Transparent" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="Transparent" />
+                            </Trigger>
+
+                            <!--  按下效果（可选）  -->
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="Transparent" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Image
+                Canvas.Left="308"
+                Canvas.Top="528"
+                Width="100"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                RenderTransformOrigin="0.992,0.386"
+                Source="pack://application:,,,/Assets/气罐.png" />
+
+            <!--<Button
                 Canvas.Left="814"
                 Canvas.Top="373"
                 Panel.ZIndex="5"
@@ -78,7 +126,37 @@
                 <Button.Content>
                     <Image Source="pack://application:,,,/Assets/icon_电磁阀.png" />
                 </Button.Content>
-            </Button>
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+                            x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="Transparent" />
+                                <Setter TargetName="border" Property="BorderBrush" Value="Transparent" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="Transparent" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Button.Template>
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent" />
+                        <Setter Property="Foreground" Value="White" />
+                        <Setter Property="BorderBrush" Value="Transparent" />
+                        <Setter Property="BorderThickness" Value="1" />
+                        <Setter Property="Padding" Value="10,5" />
+                    </Style>
+                </Button.Style>
+            </Button>-->
 
 
             <uctrl:VerticalPipeline
@@ -86,13 +164,13 @@
                 Canvas.Top="394"
                 Canvas.Right="700"
                 Width="15"
-                Height="150"
+                Height="155"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Top"
                 Panel.ZIndex="3"
                 CapRadius="2"
                 Direction="{Binding WaterDirectionSN}"
-                LiquidColor="Red" />
+                LiquidColor="#333333" />
             <uctrl:Pipeline
                 x:Name="top复制__C_"
                 Canvas.Left="350"
@@ -105,7 +183,7 @@
                 Panel.ZIndex="4"
                 CapRadius="2"
                 Direction="{Binding WaterDirectionWE}"
-                LiquidColor="Red" />
+                LiquidColor="#333333" />
 
 
 
